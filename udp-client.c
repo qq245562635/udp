@@ -9,8 +9,6 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#include "udp.h"
-
 struct sockaddr_in serverAddr;
 
 int sock;
