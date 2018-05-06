@@ -8,6 +8,8 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
+#include "udp.h"
+
 int sock;
 
 void signal_handler(int sig) {

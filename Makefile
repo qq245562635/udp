@@ -3,15 +3,12 @@ CC=gcc
 CFLAGS = -O3
 LFLAGS = -lpthread
 
-all: udp-server udp-client udp-nat
+all: udp-server udp-client
 
-udp-server: udp-server.o
+udp-server: udp.o udp-server.o
 	$(CC) $(LFLAGS) -o $@ $?
 
-udp-client: udp-client.o
-	$(CC) $(LFLAGS) -o $@ $?
-
-udp-nat: udp-nat.o
+udp-client: udp.o udp-client.o
 	$(CC) $(LFLAGS) -o $@ $?
 
 %.o: %.c
